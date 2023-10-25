@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <div id="site-nav">
+    <div class="logo">
+            <image class="logo-asset" src="./image/logo/Ef longform white.png"alt="Elderflower Field logo"></image>
+        </a>
+    </div>
+    <ul>
+        <li><a href="./bouquets.html">Bouquets</a></li>
+        <li><a href="./dahlias.html">Dahlias</a></li>
+        <li><a href="./weddings.html">Weddings</a></li>
+        <!-- <li><a href="./workshops.html">Workshops</a></li> -->
+        <li><a id="wide-nav-cta" href="./contact-us.html">Enquire</a></li>
+        </li>
+    </ul>
+  </div>
+   <div class="main-image" id="contact-us-banner">
+    <a href="index.html">
+    <image class="wide-nav-logo" src="./image/logo/Faeodyn Field white bg.png" alt="elderflower field logo"></image>
+    </a>
+  </div> 
+<!-- mobile nav -->
+  <input id="toggle" type="checkbox"></input>
+
+<label for="toggle" class="hamburger">
+  <div class="top-bun"></div>
+  <div class="meat"></div>
+  <div class="bottom-bun"></div>
+</label>
+
+<div class="nav">
+  <div class="nav-wrapper">
+    <nav>
+      <a href="./bouquets.html">Bouquets</a><br>
+      <a href="./dahlias.html">Dahlias</a><br>
+      <a href="./weddings.html">Weddings</a><br>
+      <a href="#enquire"><button id="nav-cta">Enquire</button></a>
+    </nav>
+  </div>
+</div>
+
+<div class="contact-container">
+  <h1 id="enquire">How to Order</h1>
+  <p>Whether you've seen something you loved or want to enquire about something unique we would love to hear from
+    you.<br> Call 0400 856 945 or enquire below.</p>
+  <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xkneqbwo" method="post">
+    <fieldset id="fs-frm-inputs">
+      <label for="full-name"></label>
+      <input type="text" name="name" id="full-name" class="contact-input" placeholder="Your Name" required="">
+      <label for="email-address"></label>
+      <input type="email" name="_replyto" id="email-address" class="contact-input" placeholder="Email Adress" required="">
+      <label for="message"></label>
+      <textarea rows="5" name="message" id="message" class="contact-input" placeholder="Aenean lacinia bibendum nulla sed consectetur." required=""></textarea>
+      <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+    </fieldset>
+    <input type="submit" id="contact-button" value="Submit">
+  </form>
+</div>
+
+<footer>
+  <div class=footer-logo-container>
+    <img class="footer-logo" src="image/logo/logo-white.png" alt="Elderflower Field logo"></img>
+  </div>
+  <ul class=footer-list>
+    <h4>Contact us</h4>
+    <li>1130 The Lakes Way, Darawank, Forster 2428</li><br>
+    <li>faeodynfield@gmail.com</li><br>
+    </li>
+    <li>0400 856 945</li>
+  </ul>
+  <ul class=footer-list>
+    <h4>Delivery</h4>
+    <li>Delivery can be arranged locally for $10.<br><br> We deliver to Forster, Tuncurry, Nabiac, Failford and Darawank.</li>
+  </ul>
+
+
+  <ul class = "footer-list">
+    <h4>Follow us</h4>
+    <li><a href="https://www.instagram.com/faeodynfield/"><image src="./image/logo/instagram-icon.png" class = "insta-logo" alt="Instagram logo"></image></a></li>
+  </ul>
+  <image class="mobile-footer-logo" src="image/logo/logo-white.png" alt="Elderflower Field logo"></image>
+</footer>
+</body>
+</html>

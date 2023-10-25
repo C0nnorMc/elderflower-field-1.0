@@ -1,0 +1,749 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+#large-nav-button{
+  background-color: #475A54;
+  height: 40px;
+  font-size: 1.2em;
+}
+
+#toggle {
+  display: none;
+}
+
+/* hide mobile nav*/
+@media only screen and (min-width:850px) {
+  .hamburger div{
+    display: none;
+  }
+  .mobile-footer-logo{
+    display: none;
+  }
+  .hamburger{
+    display: none;
+  }
+}
+
+#mobile-nav-container{
+  background-color: white;
+  height: 100px;
+  width: 100vw;
+  position: relative;
+}
+
+.wide-nav-logo{
+  position: absolute;
+  width:40vh;
+  height:40vh;
+  top: 15px;
+  left: 30px;
+}
+/**
+  Hamburger
+**/
+.hamburger {
+  position: absolute;
+  top: 11vh;
+  right: 5%;
+  margin-left: -2em;
+  margin-top: -45px;
+  width: 2em;
+  height: 45px;
+  z-index: 5;
+}
+
+.hamburger div {
+  position: relative;
+  width: 2em;
+  height: 7px;
+  border-radius: 1px;
+  background-color: black;
+  margin-top: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+/**
+Animations
+**/
+#toggle:checked + .hamburger .top-bun {
+  transform: rotate(-45deg);
+  margin-top: 25px;
+}
+#toggle:checked + .hamburger .bottom-bun {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+#toggle:checked + .hamburger .meat {
+  transform: rotate(45deg);
+  margin-top: -2px;
+}
+
+#toggle:checked + .hamburger + .nav {
+  top: 0;
+  transform: scale(1);
+}
+
+.hamburger div {
+  position: relative;
+  width: 2em;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #475A54
+;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+@font-face {
+  font-family: "harrington";
+  src: url(./HARRINGT.TTF);
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  height: 100%;
+  padding: 10px;
+  color: whitesmoke;
+  border-style: none;
+}
+
+.logo-asset{
+  width: 10vw;
+  height: 10vh;
+  padding-top: 20px;
+}
+/* font styles */
+
+h1{
+  line-height: 32px;
+}
+h1,h2 {
+  font-family: "harrington","Alegreya Sans", sans-serif;
+  text-align: center;
+}
+
+h3{
+  font-family: "Trebuchet MS";
+  text-align: center;
+  font-size: 18px;
+}
+
+h4{
+  font-family: "Trebuchet MS";
+}
+
+p {
+  font-family: "Trebuchet MS","Alegreya Sans", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 16px;
+}
+
+footer > p {
+  color: white;
+  font-size: 10px;
+}
+
+#top-banner {
+  color: white;
+  height: 10vh;
+}
+
+/* form styling */
+
+#fs-frm-inputs{
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  border: none;
+}
+
+#fs-frm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-button{
+  background-color: #475A54;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding:10px;
+  color:white;
+  border-style: none;
+  border-radius: 10px;
+}
+
+.contact-input{
+  margin: 10px;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  margin-top: -10px;
+}
+
+.Icon {
+  max-width: 15px;
+  max-height: 15px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 5vh 5vw;
+  background-color: #475A54;
+  max-width: 99vw;
+}
+
+.footer-logo-container{
+  width: 50vw;
+}
+
+#weddings-image-one,#weddings-image-two,#weddings-image-three{
+  height:100px;
+  width:100px;
+}
+
+li{
+  font-family: "Trebuchet MS", "Lucida Sans Unicode",
+  "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.footer-list{
+  list-style: none;
+  width:20vw;
+  height:100%;
+  color:white;
+  font-size: 14px;
+}
+
+button:hover{
+  background-color: #78a96c !important;
+  transition: 0.5s;
+}
+.footer-logo{
+  width: 35vh;
+  height: 35vh;
+  justify-content: flex-start;
+  padding-top: 35px;
+}
+
+.insta-logo{
+  width: 50px;
+  height: 50px;
+  background: #475A54;
+  margin-top: -10px;
+}
+
+/* page heros */
+.main-image {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#homepage-banner{
+  background-image: url(./image/homepage/EF_homepage_header.jpg);
+}
+
+#bouquets-banner{
+  background-image: url(./image/bouquets/EF_Bouquet_header.jpg);
+}
+
+#weddings-banner{
+  background-image: url(./image/weddings/EF_Wedding_Header.jpg);
+}
+
+#dahlias-banner{
+  background-image: url(./image/dahlias/EF_Dahlias_header.jpg);
+}
+
+#contact-us-banner{
+  height: 25vh;
+}
+
+.hero-logo {
+  width:30vw;
+  height:40vh;
+}
+
+.main-copy {
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 80vw;
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+
+#main-cta-block {
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  max-width: 100vw; 
+  padding-bottom: 10px;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  }
+
+.main-cta {
+  padding: 1%;
+  font-size: 12px;
+  width: 75vw;
+}
+
+.main-cta-image > img {
+  height: 100%;
+  width: 100%;
+}
+
+.bouquet-cta-text {
+  background-color: #475A54;
+  color:white;
+  padding-top:  15px;
+  margin-top:-3px;
+  padding-bottom:2px;
+}
+
+.bouquet-cta-text > h3 {
+margin-top: 0;
+margin-bottom:0;
+}
+
+.bouquet-cta-text > p {
+  margin-top: 5px;
+}
+
+#wide-nav-cta{
+    background-color:#475A54;
+    font-size: 22px;
+    padding:10px;
+    border-radius: 10px;
+    color: white!important;
+}
+
+#wide-nav-cta:hover{
+  background-color: #78a96c;
+  transition: 0.5s;
+  border-bottom: none!important;
+}
+
+#weddings-text, #weddings-text-two,#weddings-text-three{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* site enquire buttons */
+
+.site-enquire-button-container{
+  display: flex;
+  justify-content: center;
+}
+
+.site-enquire-button{
+  font-size: 18px;
+  padding:10px;
+  border-radius: 10px;
+  background-color: #475A54;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.site-enquire-button:hover{
+  background-color: #78a96c;
+  transition: 0.5s;
+}
+
+#enquire-white-border{
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#pickup{
+  padding-top: 5vh;
+}
+
+.main-cta-button {
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  margin-bottom: 0;
+}
+
+.main-cta-button > button {
+  margin-top: 15px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: #475A54;
+  border-radius: 10px;
+}
+
+
+.boxText {
+  background-color: #475A54
+;
+  color: white;
+  width: 50vw;
+  margin-right: 45px;
+  padding: 35px;
+}
+
+#boxTextOffset{
+  position: relative;
+  right: 80px;
+  height: 50%;
+  align-self: center;
+  
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2%;
+}
+/* mobile styles */
+@media only screen and (max-width: 850px) {
+  .gallery {
+    flex-direction: row;
+  }
+  #toggle {
+    display: none;
+  }
+  .logo{
+    display: none;
+  }
+    #main-cta-block{
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 100%;
+      flex-basis: 0 0 75%;
+    }
+    .main-cta-image{
+      width: 100%;
+      height:250px
+    }
+
+    footer{
+      flex-direction: column;
+    }
+    .footer-logo{
+      display: none;
+    }
+    .hamburger{
+      position: fixed;
+    }
+
+    .main-image{
+      height:50vh;
+    }
+
+   .footer-list{
+      width: 90vw;
+    }
+    .mobile-footer-logo{
+      display: block;
+      width: 250px;
+      height: 250px;
+      margin: auto;
+      overflow: hidden;
+    }
+    .imageTextBox{
+      flex-direction: column !important;
+      width: 100% !important;
+      position: static !important;
+    }
+    .boxImage,.boxImageAsset{
+      display: none!important;
+    }
+    .boxText{
+      position: static !important;
+      width: 100%;
+      margin-right: 0;
+    }
+    .contact-input{
+      width: 80vw;
+    }
+    .contact-container > p{
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+
+    .wide-nav-logo{
+      height: 25vh;
+      width:25vh;
+    }
+
+    /* mobile heros */
+    
+    #homepage-banner{
+      background-image: url(./image/Mobile-headers/EF_Homepage_Mobile_header.jpg);
+    }
+    
+    #bouquets-banner{
+      background-image: url(./image/Mobile-headers/EF_Bouquets_Mobile_header.jpg);
+    }
+    
+    #weddings-banner{
+      background-image: url(./image/Mobile-headers/EF_Weddings_Mobile_header.jpg);
+    }
+    
+    #dahlias-banner{
+      background-image: url(./image/Mobile-headers/EF_Dahlias_Mobile_header.jpg);
+    }
+}
+.ImgThumbnail {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 400px;
+  width: 400px;
+  padding: 10px;
+  max-width: 100%;
+  flex: 1 0 31%;
+  align-self: center;
+}
+
+.imageTextBox {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  justify-content: center;
+}
+
+.boxImage {
+  display: flex;
+  justify-content: center;
+  width:500px;
+  height: 500px;
+  margin-left:15vw;
+}
+/* gallery */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modalImage {
+  margin: auto;
+  display: block;
+  max-width: 700px;
+  max-height: 80vh;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #967db6;
+  cursor: pointer;
+}
+ /**
+Nav Styles
+**/
+#site-nav {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  padding-top: 10px;
+  background-color: white;
+  
+}
+#site-nav .logo {
+  flex: 1;
+  color: rgb(2, 37, 18); 
+  margin-left: 50px;
+}
+#site-nav ul {
+  flex: 2;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 14px;
+
+}
+#site-nav ul li {
+  list-style: none;
+}
+#site-nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+  font-weight: 400;
+  padding: 10px 15px;
+  display: flex;
+  font-family: "trebuchet ms";
+}
+#site-nav ul li a:hover {
+  border-bottom: 2px solid #475A54;
+}
+#site-nav .menu {
+  font-size: 2.5em;
+  display: none;
+}
+
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  top: -100%; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+}
+.nav-wrapper {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+nav {
+  text-align: left;
+  margin-left: 25%;
+}
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  display: inline-block;
+  margin-top: 1.25em;
+  transition: color 0.2s ease-in-out;
+  letter-spacing: 1px;
+  left:40px;
+  top:10vw;
+  font-family: "trebuchet ms";
+}
+nav a:hover {
+  color: #475A54
+;
+}
+nav a:hover:before {
+  height: 100%;
+}
+
+#nav-cta {
+  border-style: none;
+  background-color:#475A54;
+  position: relative;
+  left: 20px;
+  font-size: 22px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding:10px;
+  border-radius: 10px;
+
+}
+
+#bar {
+  padding-top: 20px;
+}
+@media (max-width: 850px) {
+  #site-nav ul {
+    margin-top: 0;
+    position: fixed;
+    top: 10vh;
+    right: -100%;
+    background: whitesmoke;
+    height: 100vh;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.5s linear;
+  }
+  #site-nav ul li a {
+    color: #555;
+  }
+  #site-nav ul li button {
+    color: #555;
+  }
+  #site-nav .menu {
+    display: block;
+    width: 100px;
+    text-align: center;
+  }
+  #chk1:checked ~ ul {
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 850px ) and (min-width: 500px) {
+  #main-cta-block{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+
+.ImgThumbnail{
+  height:200px;
+}
+
+#homepage-banner{
+  background-image: url(./image/homepage/EF_homepage_iPadheader.jpg);
+}
+#weddings-banner{
+  background-image: url(./image/weddings/EF_Wedding_iPadheader.jpg);
+}
+}
+
+
+
+.contact-container{
+  padding-right:10vw;
+  padding-left: 10vw;
+}
+
+#more-padding{
+  width:70vw;
+}
